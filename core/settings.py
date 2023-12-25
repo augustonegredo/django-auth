@@ -7,6 +7,8 @@ SECRET_KEY = 'django-insecure-j6pw(gmf4qu02ku6fex*l5ip!_usbu03kr=j3-nl(=hb%mm_5%
 DEBUG = True
 ALLOWED_HOSTS = []
 
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -14,6 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'app.authbase',
     
     'rest_framework',# rest
     # 'snippets', #?
@@ -89,3 +93,5 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+AUTH_USER_MODEL = "authbase.CustomUser" #Custom User
