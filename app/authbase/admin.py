@@ -4,6 +4,8 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import CustomUser
 
 
+
+
 class CustomUserAdmin(BaseUserAdmin):
    
     model = CustomUser
@@ -22,7 +24,7 @@ class CustomUserAdmin(BaseUserAdmin):
             )}
         ),
     )
-    search_fields = ("email",)
+    search_fields = ("username", "first_name", "last_name", "email")
     ordering = ("email",)
 
 
